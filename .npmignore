@@ -1,0 +1,5 @@
+# ignore uncompiled code
+src
+
+# ignore logs
+npm-debug.log

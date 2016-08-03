@@ -1,0 +1,6 @@
+# ignore compiled code
+lib
+
+# ignore node things
+node_modules
+npm-debug.log
