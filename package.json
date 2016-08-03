@@ -4,7 +4,9 @@
   "description": "Generate and manage a color palette based off a single base color.",
   "main": "lib/palette_generator.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel --presets es2015,stage-0 -d lib/ src/",
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/arcarson/palette-generator/issues"
   },
-  "homepage": "https://github.com/arcarson/palette-generator#readme"
+  "homepage": "https://github.com/arcarson/palette-generator#readme",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.9.0"
+  }
 }
