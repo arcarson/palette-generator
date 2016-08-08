@@ -9,7 +9,7 @@ npm install palette-generator --save
 ### Usage
 
 ```js
-generate-palette(hue, saturation, lightness [, options])
+paletteGenerator(hue, saturation, lightness [, options])
 ```
 
 ### Options
@@ -58,7 +58,7 @@ The percentage variation in shades generated for each palette color.
 ### Example
 
 ```js
-import palette-generator from 'palette-generator'
+import paletteGenerator from 'palette-generator'
 
 const palette = paletteGenerator(215, "74%", "58%", {shadeVariation: "20%",
                                                      hueInc: 15,
