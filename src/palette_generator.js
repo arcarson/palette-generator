@@ -107,7 +107,7 @@ function generateTriadicScheme(h, s, l, hueInc) {
 // palette generator
 // -------------------------------------------
 
-export function generatePalette(h, s, l, { hueInc = 20, shadeVariation = "20%", scheme = "dual" } = {}) {
+export default function generatePalette(h, s, l, { hueInc = 20, shadeVariation = "20%", scheme = "complementary" } = {}) {
   const colorGroupNames = ["alpha", "beta", "delta", "gamma", "epsilon"]
 
   let colorValues = []
