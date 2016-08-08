@@ -1,7 +1,7 @@
 {
   "name": "palette-generator",
   "version": "1.0.0",
-  "description": "Generate and manage a color palette based off a single base color.",
+  "description": "A methodical approach for creating and managing color palettes.",
   "main": "lib/palette_generator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
