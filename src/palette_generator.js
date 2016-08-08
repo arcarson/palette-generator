@@ -42,7 +42,7 @@ function adjustL(h, s, l, perc) {
 }
 
 function generateShades(h, s, l, shadeVariation) {
-  const names = ["lighter", "light", "base", "dark", "darker"]
+  const names = ["darker", "dark", "base", "light", "lighter"]
   let variationMultiplier = -2
   let shades = {}
 
