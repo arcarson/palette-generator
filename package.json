@@ -1,6 +1,6 @@
 {
   "name": "palette-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A methodical approach for creating and managing color palettes.",
   "main": "lib/palette_generator.js",
   "scripts": {
