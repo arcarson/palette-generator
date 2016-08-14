@@ -3,25 +3,7 @@
 
 // handle for errors/incorrect values
 // accept rgb/hsl string?
-// build to es2015
-// Readme
-// npm package
 // react component?
-
-
-// schemes
-// -------------------------------------------
-
-// Complementary
-//   Multiple accent colors selected across color wheel from base color
-// Analogous
-//   Secondary colors selected adjacent to base color
-//   2 secondary colors only
-// Analogous (accented)
-//   secondary colors selected adjacent to base color + single accent color from across color wheel
-//   2 secondary colors + accent color only
-// Dual
-//   Primary + secondary colors + their accent colors
 
 
 // utilities
