@@ -41,25 +41,25 @@ function generateShades(h, s, l, shadeVariation) {
 // scheme generators
 // -------------------------------------------
 
-function generateAnalogousScheme(h, s, l, hueInc) {
+function generateAnalogousScheme(h, s, l, hueIncrement) {
   return [
     [h, s, l],
-    [h - hueInc, s, l],
-    [h + hueInc, s, l]
+    [h - hueIncrement, s, l],
+    [h + hueIncrement, s, l]
   ]
 }
 
-function generateAccentedAnalogousScheme(h, s, l, hueInc) {
+function generateAccentedAnalogousScheme(h, s, l, hueIncrement) {
   return [
     [h, s, l],
-    [h - hueInc, s, l],
-    [h + hueInc, s, l],
+    [h - hueIncrement, s, l],
+    [h + hueIncrement, s, l],
     [oppositeHue(h), s, l]
   ]
 }
 
-function generateDualScheme(h, s, l, hueInc) {
-  const betaHue = h + hueInc
+function generateDualScheme(h, s, l, hueIncrement) {
+  const betaHue = h + hueIncrement
   return [
     [h, s, l],
     [oppositeHue(h), s, l],
@@ -68,20 +68,20 @@ function generateDualScheme(h, s, l, hueInc) {
   ]
 }
 
-function generateComplementaryScheme(h, s, l, hueInc) {
+function generateComplementaryScheme(h, s, l, hueIncrement) {
   return [
     [h, s, l],
     [oppositeHue(h), s, l],
-    [oppositeHue(h) - hueInc, s, l],
-    [oppositeHue(h) + hueInc, s, l]
+    [oppositeHue(h) - hueIncrement, s, l],
+    [oppositeHue(h) + hueIncrement, s, l]
   ]
 }
 
-function generateTriadicScheme(h, s, l, hueInc) {
+function generateTriadicScheme(h, s, l, hueIncrement) {
   return [
     [h, s, l],
-    [oppositeHue(h) - hueInc, s, l],
-    [oppositeHue(h) + hueInc, s, l]
+    [oppositeHue(h) - hueIncrement, s, l],
+    [oppositeHue(h) + hueIncrement, s, l]
   ]
 }
 
@@ -89,28 +89,28 @@ function generateTriadicScheme(h, s, l, hueInc) {
 // palette generator
 // -------------------------------------------
 
-export default function generatePalette(h, s, l, { hueInc = 20, shadeVariation = "20%", scheme = "complementary" } = {}) {
+export default function generatePalette(h, s, l, { hueIncrement = 20, shadeVariation = "20%", scheme = "complementary" } = {}) {
   const colorGroupNames = ["alpha", "beta", "delta", "gamma", "epsilon"]
 
   let colorValues = []
   switch (scheme) {
   case "complementary":
-    colorValues = generateComplementaryScheme(h, s, l, hueInc)
+    colorValues = generateComplementaryScheme(h, s, l, hueIncrement)
     break
   case "analogous":
-    colorValues = generateAnalogousScheme(h, s, l, hueInc)
+    colorValues = generateAnalogousScheme(h, s, l, hueIncrement)
     break
   case "accentedAnalogous":
-    colorValues = generateAccentedAnalogousScheme(h, s, l, hueInc)
+    colorValues = generateAccentedAnalogousScheme(h, s, l, hueIncrement)
     break
   case "dual":
-    colorValues = generateDualScheme(h, s, l, hueInc)
+    colorValues = generateDualScheme(h, s, l, hueIncrement)
     break
   case "triadic":
-    colorValues = generateTriadicScheme(h, s, l, hueInc)
+    colorValues = generateTriadicScheme(h, s, l, hueIncrement)
     break
   default:
-    colorValues = generateComplementaryScheme(h, s, l, hueInc)
+    colorValues = generateComplementaryScheme(h, s, l, hueIncrement)
   }
 
   let colors = {}
