@@ -28,7 +28,7 @@ function generateShades(h, s, l, shadeVariation) {
   let variationMultiplier = -2
   let shades = {}
 
-  names.map(name => {
+  names.forEach(name => {
     const variationPercentage = parseInt(shadeVariation) * variationMultiplier
     shades[name] = getShade(h, s, l, variationPercentage)
     variationMultiplier++
@@ -114,7 +114,7 @@ export default function generatePalette(h, s, l, { hueInc = 20, shadeVariation =
   }
 
   let colors = {}
-  colorValues.map((color, i) => {
+  colorValues.forEach((color, i) => {
     const [h, s, l] = color
     colors[colorGroupNames[i]] = generateShades(h, s, l, shadeVariation)
   })
