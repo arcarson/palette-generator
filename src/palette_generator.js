@@ -17,10 +17,10 @@ function oppositeHue(h) {
   return (h + 180) % 360
 }
 
-function adjustL(h, s, l, perc) {
-  const lr = 100 - parseInt(l)
-  const adjustedL = parseInt(l) + ((parseInt(perc) / 100) * lr) + "%"
-  return color(h, s, adjustedL)
+function getShade(h, s, l, percentage) {
+  const differenceToWhite = 100 - parseInt(l)
+  const adjustedLightness  = parseInt(l) + ((parseInt(percentage) / 100) * differenceToWhite) + "%"
+  return color(h, s, adjustedLightness)
 }
 
 function generateShades(h, s, l, shadeVariation) {
@@ -29,8 +29,8 @@ function generateShades(h, s, l, shadeVariation) {
   let shades = {}
 
   names.map(name => {
-    const vp = parseInt(shadeVariation) * variationMultiplier
-    shades[name] = adjustL(h, s, l, vp)
+    const variationPercentage = parseInt(shadeVariation) * variationMultiplier
+    shades[name] = getShade(h, s, l, variationPercentage)
     variationMultiplier++
   })
 
