@@ -22,7 +22,7 @@ _Values_: `analogous`, `accentedAnalogous`, `complementary`, `dual`, `triadic`
 
 The color theory rule set used to generate the palette.
 
-#### hueInc
+#### hueIncrement
 _Default_: `20`
 
 The degree of hue variation between generated palette colors.
@@ -61,7 +61,7 @@ The percentage variation in shades generated for each palette color.
 import paletteGenerator from 'palette-generator'
 
 const palette = paletteGenerator(215, "74%", "58%", {shadeVariation: "20%",
-                                                     hueInc: 15,
+                                                     hueIncrement: 15,
                                                      scheme: "accentedAnalogous"})
 
 const styles = {
