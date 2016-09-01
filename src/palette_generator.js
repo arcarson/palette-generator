@@ -24,7 +24,7 @@ function getShade(h, s, l, percentage) {
   return hslString(h, s, adjustedLightness)
 }
 
-function generateShades(h, s, l, shadeVariation) {
+export function generateShades(h, s, l, shadeVariation) {
   const names = ['darker', 'dark', 'base', 'light', 'lighter']
   let variationMultiplier = -2
   const shades = {}
